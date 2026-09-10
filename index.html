@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité — CorpoVault</title>
+    <meta
+      name="description"
+      content="Politique de confidentialité de l'application et de l'extension navigateur CorpoVault (ACM Ingénierie)."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fg: #1a1a1a;
+        --muted: #5c5c5c;
+        --bg: #fafafa;
+        --border: #e5e5e5;
+        --link: #0b6e4f;
+        --chip: #f0f0f0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #f4f4f5;
+          --muted: #a1a1aa;
+          --bg: #18181b;
+          --border: #3f3f46;
+          --link: #4ade80;
+          --chip: #27272a;
+        }
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.55;
+      }
+      main {
+        max-width: 44rem;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 4rem;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .lang {
+        display: inline-flex;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        overflow: hidden;
+        background: var(--chip);
+      }
+      .lang button {
+        appearance: none;
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .lang button[aria-pressed="true"] {
+        background: var(--fg);
+        color: var(--bg);
+      }
+      .lang .flag {
+        font-size: 1.05rem;
+        line-height: 1;
+      }
+      h1 {
+        font-size: 1.75rem;
+        margin: 0 0 0.35rem;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 2rem 0 0.6rem;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      a {
+        color: var(--link);
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      [hidden] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <p class="muted" style="margin: 0">
+          CorpoVault · ACM Ingénierie
+        </p>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" id="btn-fr" aria-pressed="true">
+            <span class="flag" aria-hidden="true">🇫🇷</span> FR
+          </button>
+          <button type="button" id="btn-en" aria-pressed="false">
+            <span class="flag" aria-hidden="true">🇬🇧</span> EN
+          </button>
+        </div>
+      </div>
+
+      <article id="content-fr" lang="fr">
+        <h1>Politique de confidentialité</h1>
+        <p class="muted">Dernière mise à jour : 10 septembre 2026</p>
+
+        <p>
+          CorpoVault est un gestionnaire de mots de passe d’entreprise édité par
+          <strong>ACM Ingénierie</strong>. Cette page décrit le traitement des
+          données pour l’application web et l’extension navigateur CorpoVault
+          (Chrome, Firefox, Edge).
+        </p>
+
+        <h2>1. Responsable du traitement</h2>
+        <p>
+          ACM Ingénierie<br />
+          Contact : l’administrateur de votre organisation CorpoVault, ou
+          <a href="mailto:thibault.ledanois@acm-ingenierie.fr"
+            >alexandre.vallon@acm-ingenierie.fr</a
+          >.
+        </p>
+
+        <h2>2. Données traitées</h2>
+        <p>Selon l’usage (coffre web et/ou extension) :</p>
+        <ul>
+          <li>
+            Identifiants de compte CorpoVault (e-mail professionnel, nom) et
+            traces de connexion (audit interne).
+          </li>
+          <li>
+            Secrets du coffre (mots de passe, identifiants de sites, notes,
+            clés API) : chiffrés côté serveur, accessibles uniquement aux
+            personnes autorisées de l’organisation.
+          </li>
+          <li>
+            Extension : URL de l’instance CorpoVault après association (pairing),
+            identifiant d’appareil, jetons de session d’extension (stockés
+            localement, refresh token chiffré), et, le cas échéant, un cache
+            coffre hors ligne chiffré sur l’appareil.
+          </li>
+          <li>
+            Sur les pages visitées : détection des champs de connexion pour
+            l’autoremplissage et la proposition d’enregistrement — uniquement
+            pour fournir cette fonction, pas pour un profilage publicitaire.
+          </li>
+        </ul>
+
+        <h2>3. Finalités</h2>
+        <p>Les données servent exclusivement à :</p>
+        <ul>
+          <li>authentifier l’utilisateur et sécuriser le coffre ;</li>
+          <li>
+            remplir et enregistrer des identifiants sur les sites, à la demande
+            de l’utilisateur ;
+          </li>
+          <li>administrer les accès (groupes, collections, audit).</li>
+        </ul>
+        <p>
+          ACM Ingénierie ne vend pas les données, ne les utilise pas pour de la
+          publicité, et ne les transmet pas à des régies ou traceurs tiers.
+        </p>
+
+        <h2>4. Destinataires et hébergement</h2>
+        <p>
+          Les secrets et comptes sont stockés sur le serveur CorpoVault de
+          l’organisation (instance auto-hébergée). L’extension n’envoie des
+          données qu’à cette instance, après pairing. Aucun service d’analyse
+          externe n’est embarqué dans l’extension.
+        </p>
+
+        <h2>5. Conservation</h2>
+        <p>
+          Les données de coffre sont conservées tant que le compte et
+          l’organisation existent, conformément à la politique interne. Les
+          données locales de l’extension (pairing, session, cache) peuvent être
+          effacées en dissociant l’extension ou en la désinstallant.
+        </p>
+
+        <h2>6. Droits</h2>
+        <p>
+          Conformément au RGPD, vous pouvez demander l’accès, la rectification
+          ou l’effacement de vos données auprès de l’administrateur CorpoVault
+          de votre organisation (ou du contact ci-dessus).
+        </p>
+
+        <h2>7. Extension navigateur — permissions</h2>
+        <p>
+          L’extension demande des permissions techniques (stockage local, alarmes,
+          détection d’inactivité, onglet actif, injection de script, presse-papiers,
+          accès aux sites) uniquement pour l’autoremplissage, l’enregistrement
+          d’identifiants, le verrouillage automatique et le maintien de session.
+          Le détail figure dans la fiche Chrome Web Store / Firefox Add-ons.
+        </p>
+      </article>
+
+      <article id="content-en" lang="en" hidden>
+        <h1>Privacy policy</h1>
+        <p class="muted">Last updated: 10 September 2026</p>
+
+        <p>
+          CorpoVault is an enterprise password manager published by
+          <strong>ACM Ingénierie</strong>. This page describes how data is
+          processed for the CorpoVault web application and browser extension
+          (Chrome, Firefox, Edge).
+        </p>
+
+        <h2>1. Data controller</h2>
+        <p>
+          ACM Ingénierie<br />
+          Contact: your organisation’s CorpoVault administrator, or
+          <a href="mailto:alexandre.vallon@acm-ingenierie.fr"
+            >alexandre.vallon@acm-ingenierie.fr</a
+          >.
+        </p>
+
+        <h2>2. Data we process</h2>
+        <p>Depending on use (web vault and/or extension):</p>
+        <ul>
+          <li>
+            CorpoVault account identifiers (work email, name) and login traces
+            (internal audit).
+          </li>
+          <li>
+            Vault secrets (passwords, site usernames, notes, API keys): encrypted
+            on the server, accessible only to authorised people in the
+            organisation.
+          </li>
+          <li>
+            Extension: CorpoVault instance URL after pairing, device identifier,
+            extension session tokens (stored locally, refresh token encrypted),
+            and, if enabled, an encrypted offline vault cache on the device.
+          </li>
+          <li>
+            On visited pages: detection of login fields for autofill and save
+            prompts — only to provide that feature, not for advertising
+            profiling.
+          </li>
+        </ul>
+
+        <h2>3. Purposes</h2>
+        <p>Data is used solely to:</p>
+        <ul>
+          <li>authenticate the user and secure the vault;</li>
+          <li>
+            fill and save credentials on websites, at the user’s request;
+          </li>
+          <li>administer access (groups, collections, audit).</li>
+        </ul>
+        <p>
+          ACM Ingénierie does not sell data, does not use it for advertising,
+          and does not share it with ad networks or third-party trackers.
+        </p>
+
+        <h2>4. Recipients and hosting</h2>
+        <p>
+          Secrets and accounts are stored on the organisation’s CorpoVault
+          server (self-hosted instance). The extension sends data only to that
+          instance, after pairing. No external analytics service is bundled in
+          the extension.
+        </p>
+
+        <h2>5. Retention</h2>
+        <p>
+          Vault data is kept for as long as the account and organisation exist,
+          according to internal policy. Local extension data (pairing, session,
+          cache) can be deleted by unpairing or uninstalling the extension.
+        </p>
+
+        <h2>6. Your rights</h2>
+        <p>
+          Under the GDPR, you may request access to, rectification or erasure of
+          your data from your organisation’s CorpoVault administrator (or the
+          contact above).
+        </p>
+
+        <h2>7. Browser extension — permissions</h2>
+        <p>
+          The extension requests technical permissions (local storage, alarms,
+          idle detection, active tab, scripting, clipboard, host access) only
+          for autofill, credential saving, automatic lock and session keep-alive.
+          Details are listed on the Chrome Web Store / Firefox Add-ons listing.
+        </p>
+      </article>
+    </main>
+    <script>
+      (function () {
+        var fr = document.getElementById("content-fr");
+        var en = document.getElementById("content-en");
+        var btnFr = document.getElementById("btn-fr");
+        var btnEn = document.getElementById("btn-en");
+        var titles = {
+          fr: "Politique de confidentialité — CorpoVault",
+          en: "Privacy policy — CorpoVault",
+        };
+
+        function setLang(lang) {
+          var isEn = lang === "en";
+          fr.hidden = isEn;
+          en.hidden = !isEn;
+          btnFr.setAttribute("aria-pressed", isEn ? "false" : "true");
+          btnEn.setAttribute("aria-pressed", isEn ? "true" : "false");
+          document.documentElement.lang = isEn ? "en" : "fr";
+          document.title = titles[isEn ? "en" : "fr"];
+          try {
+            localStorage.setItem("cv_privacy_lang", isEn ? "en" : "fr");
+          } catch (e) {}
+          var url = new URL(window.location.href);
+          url.searchParams.set("lang", isEn ? "en" : "fr");
+          history.replaceState({}, "", url);
+        }
+
+        btnFr.addEventListener("click", function () {
+          setLang("fr");
+        });
+        btnEn.addEventListener("click", function () {
+          setLang("en");
+        });
+
+        var params = new URLSearchParams(window.location.search);
+        var stored = "";
+        try {
+          stored = localStorage.getItem("cv_privacy_lang") || "";
+        } catch (e) {}
+        var initial = params.get("lang") || stored || "fr";
+        setLang(initial === "en" ? "en" : "fr");
+      })();
+    </script>
+  </body>
+</html>
